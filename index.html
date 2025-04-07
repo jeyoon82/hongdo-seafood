@@ -30,11 +30,33 @@
       padding: 10px;
       text-align: center;
     }
-    nav a {
-      color: white;
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      position: relative;
       margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
       text-decoration: none;
       font-weight: bold;
+    }
+    nav ul li ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: rgba(0,0,0,0.7);
+      padding: 10px;
+      display: none;
+      white-space: nowrap;
+    }
+    nav ul li:hover > ul {
+      display: block;
     }
     main {
       padding: 20px;
@@ -54,15 +76,28 @@
     <p>신선한 홍도 해산물을 집 앞까지!</p>
   </header>
   <nav>
-    <a href="#">홈</a>
-    <a href="#">상품 소개</a>
-    <a href="#">주문 방법</a>
-    <a href="#">문의하기</a>
+    <ul>
+      <li>
+        <a href="#">홈</a>
+        <ul>
+          <li><a href="#about">홍도 소개</a></li>
+        </ul>
+      </li>
+      <li><a href="#">상품 소개</a></li>
+      <li><a href="#">주문 방법</a></li>
+      <li><a href="#">문의하기</a></li>
+    </ul>
   </nav>
   <main>
     <h2>어서오세요!</h2>
     <p>전남 신안군 홍도에서 잡은 신선한 해산물을 판매합니다.</p>
     <p>낙지, 전복, 해삼 등 계절별 다양한 해산물이 준비되어 있습니다.</p>
+
+    <section id="about">
+      <h2>홍도 소개</h2>
+      <p>홍도는 전라남도 신안군에 위치한 작은 섬으로, 붉은빛을 띠는 바위들과 아름다운 해안선으로 유명합니다. 섬 전체가 천연기념물로 지정되어 있을 정도로 자연경관이 뛰어나며, 특히 해돋이와 해넘이의 풍경은 장관을 이룹니다.</p>
+      <p>홍도 주변 해역은 해산물이 풍부하여 낙지, 전복, 해삼 등 다양한 해산물이 잡히며, 현지 어민들이 직접 잡은 신선한 해산물을 제공하고 있습니다. 또한 해양 관광지로도 유명해 매년 많은 관광객들이 방문합니다.</p>
+    </section>
   </main>
   <footer>
     <p>© 2025 홍도 해산물 직판장 | 전화: 010-6622-3992</p>
